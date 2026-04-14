@@ -114,10 +114,8 @@ The Dev Container comes pre-configured with:
 
 - **Python 3.11** (base image)
 - **Node.js 24** (LTS, via NVM)
-- **Azure CLI**
-- **Terraform**, **tflint**, **terragrunt**
 - **Git** with LF line ending configuration
-- VS Code extensions for Python, Jupyter, Terraform, YAML, JSON, Jinja2, Draw.io, and Azure
+- VS Code extensions for Python, YAML, JSON
 
 ## Troubleshooting
 
