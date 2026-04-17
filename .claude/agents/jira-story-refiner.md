@@ -65,7 +65,6 @@ the user for review:
 
 **Summary (one line):** `<imperative verb phrase>`
 
-**Story**
 As a platform data engineer, I would like to `<action>` so that `<outcome / business value>`.
 
 **Acceptance Criteria**
@@ -171,52 +170,118 @@ Replace placeholder text with the refined story content.
   "version": 1,
   "content": [
     {
-      "type": "heading", "attrs": { "level": 3 },
-      "content": [{ "type": "text", "text": "Story" }]
-    },
-    {
-      "type": "paragraph",
-      "content": [{ "type": "text", "text": "As a platform data engineer, I would like to <action> so that <outcome>." }]
-    },
-    {
-      "type": "heading", "attrs": { "level": 3 },
-      "content": [{ "type": "text", "text": "Acceptance Criteria" }]
-    },
-    {
-      "type": "bulletList",
+      "type": "extension",
+      "attrs": {
+        "extensionType": "com.atlassian.confluence.macro.core",
+        "extensionKey": "panel",
+        "parameters": {
+          "macroParams": { "panelType": { "value": "info" } },
+          "macroMetadata": { "title": "Story" }
+        },
+        "layout": "default"
+      },
       "content": [
-        { "type": "listItem", "content": [{ "type": "paragraph", "content": [{ "type": "text", "text": "<criterion 1>" }] }] },
-        { "type": "listItem", "content": [{ "type": "paragraph", "content": [{ "type": "text", "text": "<criterion 2>" }] }] }
+        {
+          "type": "paragraph",
+          "content": [{ "type": "text", "text": "As a platform data engineer, I would like to <action> so that <outcome>." }]
+        }
       ]
     },
     {
-      "type": "heading", "attrs": { "level": 3 },
-      "content": [{ "type": "text", "text": "Out-of-scope" }]
-    },
-    {
-      "type": "bulletList",
+      "type": "extension",
+      "attrs": {
+        "extensionType": "com.atlassian.confluence.macro.core",
+        "extensionKey": "panel",
+        "parameters": {
+          "macroParams": { "panelType": { "value": "success" } },
+          "macroMetadata": { "title": "Acceptance Criteria" }
+        },
+        "layout": "default"
+      },
       "content": [
-        { "type": "listItem", "content": [{ "type": "paragraph", "content": [{ "type": "text", "text": "<exclusion 1>" }] }] }
+        {
+          "type": "heading", "attrs": { "level": 4 },
+          "content": [{ "type": "text", "text": "Acceptance Criteria" }]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            { "type": "listItem", "content": [{ "type": "paragraph", "content": [{ "type": "text", "text": "<criterion 1>" }] }] },
+            { "type": "listItem", "content": [{ "type": "paragraph", "content": [{ "type": "text", "text": "<criterion 2>" }] }] }
+          ]
+        }
       ]
     },
     {
-      "type": "heading", "attrs": { "level": 3 },
-      "content": [{ "type": "text", "text": "Dependencies" }]
-    },
-    {
-      "type": "bulletList",
+      "type": "extension",
+      "attrs": {
+        "extensionType": "com.atlassian.confluence.macro.core",
+        "extensionKey": "panel",
+        "parameters": {
+          "macroParams": { "panelType": { "value": "error" } },
+          "macroMetadata": { "title": "Out-of-scope" }
+        },
+        "layout": "default"
+      },
       "content": [
-        { "type": "listItem", "content": [{ "type": "paragraph", "content": [{ "type": "text", "text": "<dependency or 'None'>" }] }] }
+        {
+          "type": "heading", "attrs": { "level": 4 },
+          "content": [{ "type": "text", "text": "Out-of-scope" }]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            { "type": "listItem", "content": [{ "type": "paragraph", "content": [{ "type": "text", "text": "<exclusion 1>" }] }] }
+          ]
+        }
       ]
     },
     {
-      "type": "heading", "attrs": { "level": 3 },
-      "content": [{ "type": "text", "text": "Presentation" }]
+      "type": "extension",
+      "attrs": {
+        "extensionType": "com.atlassian.confluence.macro.core",
+        "extensionKey": "panel",
+        "parameters": {
+          "macroParams": { "panelType": { "value": "warning" } },
+          "macroMetadata": { "title": "Dependencies" }
+        },
+        "layout": "default"
+      },
+      "content": [
+        {
+          "type": "heading", "attrs": { "level": 4 },
+          "content": [{ "type": "text", "text": "Dependencies" }]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            { "type": "listItem", "content": [{ "type": "paragraph", "content": [{ "type": "text", "text": "<dependency or 'None'>" }] }] }
+          ]
+        }
+      ]
     },
     {
-      "type": "bulletList",
+      "type": "extension",
+      "attrs": {
+        "extensionType": "com.atlassian.confluence.macro.core",
+        "extensionKey": "panel",
+        "parameters": {
+          "macroParams": { "panelType": { "value": "note" } },
+          "macroMetadata": { "title": "Presentation" }
+        },
+        "layout": "default"
+      },
       "content": [
-        { "type": "listItem", "content": [{ "type": "paragraph", "content": [{ "type": "text", "text": "<presentation approach>" }] }] }
+        {
+          "type": "heading", "attrs": { "level": 4 },
+          "content": [{ "type": "text", "text": "Presentation" }]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            { "type": "listItem", "content": [{ "type": "paragraph", "content": [{ "type": "text", "text": "<presentation approach>" }] }] }
+          ]
+        }
       ]
     }
   ]
